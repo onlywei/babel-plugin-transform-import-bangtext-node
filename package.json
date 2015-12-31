@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-import-bang-text",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Babel plugin that supports `import foo from 'foo.txt!text'`",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "url": "git+https://github.com/onlywei/babel-plugin-import-bang-text.git"
   },
   "keywords": [
-    "babel-plugin", "SystemJS"
+    "babel-plugin",
+    "SystemJS"
   ],
   "author": "Wei Wang <wei@fastmail.com>",
   "license": "MIT",
