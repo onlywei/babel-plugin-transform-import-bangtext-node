@@ -15,9 +15,9 @@
     "url": "git+https://github.com/onlywei/babel-plugin-import-bang-text.git"
   },
   "keywords": [
-    "babel-plugin"
+    "babel-plugin", "SystemJS"
   ],
-  "author": "Wei Wang <weiwang85@gmail.com>",
+  "author": "Wei Wang <wei@fastmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/onlywei/babel-plugin-import-bang-text/issues"
