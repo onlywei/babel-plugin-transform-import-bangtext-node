@@ -3,6 +3,12 @@ export default function ({types: t}) {
     visitor: {
       ImportDeclaration(path) {
         const node = path.node;
+        const importTarget = node.source.value;
+
+        if (!/!text$/.test(importTarget)) {
+          return;
+        }
+
         const specifier = node.specifiers[0];
 
         t.assertImportDefaultSpecifier(specifier);
@@ -13,7 +19,7 @@ export default function ({types: t}) {
 
         path.replaceWith(t.variableDeclaration('var', [
           t.variableDeclarator(varName, t.callExpression(readFileSync, [
-            t.stringLiteral(node.source.value.split('!')[0]),
+            t.stringLiteral(importTarget.split('!')[0]),
             t.stringLiteral('utf8')
           ]))
         ]));
