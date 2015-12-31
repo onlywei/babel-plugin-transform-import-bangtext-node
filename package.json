@@ -4,7 +4,8 @@
   "description": "Babel plugin that supports `import foo from 'foo.txt!text'`",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/onlywei/babel-plugin-import-bang-text/issues"
   },
-  "homepage": "https://github.com/onlywei/babel-plugin-import-bang-text#readme"
+  "homepage": "https://github.com/onlywei/babel-plugin-import-bang-text#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
 }

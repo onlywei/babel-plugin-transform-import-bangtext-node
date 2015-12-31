@@ -1,0 +1,69 @@
+{
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "array-bracket-spacing": [2, "never"],
+    "arrow-parens": [2, "always"],
+    "arrow-spacing": [2, {"before": true, "after": true}],
+    "brace-style": [2, "1tbs"],
+    "comma-spacing": [2, {"before": false, "after": true}],
+    "comma-style": [2, "last"],
+    "computed-property-spacing": [2, "never"],
+    "eol-last": 2,
+    "eqeqeq": 2,
+    "func-style": [2, "declaration"],
+    "indent": [2, 2, {"SwitchCase": 1, "VariableDeclarator": 1}],
+    "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
+    "linebreak-style": [2, "unix"],
+    "lines-around-comment": [2, {"beforeBlockComment": true}],
+    "max-len": [2, 100, 4, {"ignorePattern": "^import\\s"}],
+    "new-cap": [2, {"capIsNewExceptions": ["Date.UTC"]}],
+    "new-parens": 2,
+    "newline-after-var": [2, "always"],
+    "no-array-constructor": 2,
+    "no-continue": 2,
+    "no-extra-parens": 2,
+    "no-lonely-if": 2,
+    "no-multiple-empty-lines": [2, {"max": 1}],
+    "no-new-object": 2,
+    "no-restricted-syntax": [2, "WithStatement"],
+    "no-spaced-func": 2,
+    "no-trailing-spaces": 2,
+    "no-unneeded-ternary": 2,
+    "no-var": 2,
+    "object-curly-spacing": [2, "never"],
+    "one-var": [2, {"initialized": "never", "uninitialized": "always"}],
+    "operator-linebreak": [2, "after"],
+    "quote-props": [2, "as-needed", {"keywords": true}],
+    "quotes": [2, "single"],
+    "prefer-arrow-callback": 1,
+    "semi-spacing": [2, {"before": false, "after": true}],
+    "semi": 2,
+    "space-after-keywords": 2,
+    "space-before-blocks": 2,
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "space-before-keywords": [2, "always"],
+    "space-in-parens": [2, "never"],
+    "space-infix-ops": [2, {"int32Hint": false}],
+    "space-return-throw-case": 2,
+    "space-unary-ops": [1, { "words": true, "nonwords": false }],
+    "spaced-comment": [2, "always"],
+    "valid-jsdoc": [2, {
+      "prefer": {
+        "arg": "param",
+        "argument": "param",
+        "return": "returns"
+      },
+      "requireParamDescription": false,
+      "requireReturn": false,
+      "requireReturnDescription": false
+    }]
+  }
+}
