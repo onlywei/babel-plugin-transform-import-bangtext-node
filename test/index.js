@@ -16,10 +16,26 @@ describe('fixtures', () => {
 
     it(caseName.split('-').join(' '), () => {
       const fixtureDir = path.join(fixturesDir, caseName);
-      const actual = babel.transformFileSync(path.join(fixtureDir, 'actual.js')).code;
-      const expected = fs.readFileSync(path.join(fixtureDir, 'expected.js')).toString();
+      let expectedError;
 
-      assert.equal(trim(actual), trim(expected));
+      try {
+        expectedError = fs.readFileSync(path.join(fixtureDir, 'expected-error.js')).toString();
+      } catch (except) {
+        // Ignore. This test case is not supposed to error.
+      }
+
+      if (expectedError) {
+        assert.throws(
+          () => babel.transformFileSync(path.join(fixtureDir, 'actual.js')),
+          new RegExp(trim(expectedError))
+        );
+      } else {
+        const actual = babel.transformFileSync(path.join(fixtureDir, 'actual.js')).code;
+        const expected = fs.readFileSync(path.join(fixtureDir, 'expected.js')).toString();
+
+        assert.equal(trim(actual), trim(expected));
+      }
+
     });
   });
 });
