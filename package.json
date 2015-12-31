@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint && mocha --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/onlywei/babel-plugin-import-bang-text#readme",
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "babel-core": "^6.3.26",
+    "babel-register": "^6.3.13",
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.4"
   }
 }
