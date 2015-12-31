@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-import-bang-text",
+  "version": "0.0.1",
+  "description": "Babel plugin that supports `import foo from 'foo.txt!text'`",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlywei/babel-plugin-import-bang-text.git"
+  },
+  "keywords": [
+    "babel-plugin"
+  ],
+  "author": "Wei Wang <weiwang85@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onlywei/babel-plugin-import-bang-text/issues"
+  },
+  "homepage": "https://github.com/onlywei/babel-plugin-import-bang-text#readme"
+}
