@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    [
+      "../../../src/index.js",
+      {
+        "basePath": "/absolute/test/path"
+      }
+    ]
+  ]
+}
