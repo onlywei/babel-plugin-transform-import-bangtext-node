@@ -22,7 +22,7 @@ export default function ({types: t}) {
         path.replaceWith(t.variableDeclaration('var', [
           t.variableDeclarator(varName, t.callExpression(readFileSync, [
             t.stringLiteral(resolveImportPath(importTarget.split('!')[0], state.opts.basePath)),
-            t.stringLiteral('utf8')
+            t.stringLiteral(state.opts.encoding || 'utf8')
           ]))
         ]));
       }
