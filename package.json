@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onlywei/babel-plugin-import-bang-text.git"
+    "url": "git+https://github.com/onlywei/babel-plugin-transform-import-bangtext-node.git"
   },
   "keywords": [
     "babel-plugin",
@@ -21,9 +21,9 @@
   "author": "Wei Wang <wei@fastmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/onlywei/babel-plugin-import-bang-text/issues"
+    "url": "https://github.com/onlywei/babel-plugin-transform-import-bangtext-node/issues"
   },
-  "homepage": "https://github.com/onlywei/babel-plugin-import-bang-text#readme",
+  "homepage": "https://github.com/onlywei/babel-plugin-transform-import-bangtext-node#readme",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
