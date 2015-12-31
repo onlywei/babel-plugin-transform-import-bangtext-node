@@ -1,8 +1,6 @@
 import path from 'path';
 
 export default function ({types: t}) {
-  const relativeOrAbsolutePath = new RegExp('^/|^./|^../');
-
   return {
     visitor: {
       ImportDeclaration(path, state) {
@@ -32,6 +30,15 @@ export default function ({types: t}) {
   };
 
   function resolveImportPath(target, base) {
-    return relativeOrAbsolutePath.test(target) ? target : path.join(base, target);
+    // target path begins with '/', './', or '../'
+    if (/^\/|^\.\/|^\.\.\//.test(target)) {
+      return target;
+    }
+
+    if (typeof base !== 'string') {
+      throw new Error(`Cannot import '${target}!text' without specifying a basePath option.`);
+    }
+
+    return path.join(base, target);
   }
 }
