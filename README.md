@@ -20,12 +20,10 @@ npm install --save-dev babel-plugin-transform-import-bangtext-node
 
 This *only* works in Node environments. Do not try to use this plugin in a browser environment.
 
-The intended use is with [babel-register](https://babeljs.io/docs/usage/require/):
-
 ```js
 require('babel-register')({
   plugins: [
-    ['transform-import-bang-text', {basePath: '/path/to/wherever'}]
+    ['transform-import-bangtext-node', {basePath: '/path/to/wherever'}]
   ]
 });
 ```
