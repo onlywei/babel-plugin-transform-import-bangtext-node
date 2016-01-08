@@ -31,12 +31,8 @@ export default function ({types: t}) {
 
   function resolveImportPath(target, base) {
     // target path begins with '/', './', or '../'
-    if (/^\/|^\.\/|^\.\.\//.test(target)) {
+    if (typeof base !== 'string' || /^\/|^\.\/|^\.\.\//.test(target)) {
       return target;
-    }
-
-    if (typeof base !== 'string') {
-      throw new Error(`Cannot import '${target}!text' without specifying a basePath option.`);
     }
 
     return path.join(base, target);

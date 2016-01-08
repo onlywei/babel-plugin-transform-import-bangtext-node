@@ -32,11 +32,9 @@ require('babel-register')({
 
 ## Options
 
-* `basePath` - Because `fs.readFile()` does not follow the same rules as `require()`, if you ever
-  try to import anything that does not begin with `/`, `./`, or `../`, you will need to specify this
-  option. The import path will be joined with the given basePath using `path.join(base, target)`.
-  Using an absolute base path is recommended. If no basePath is given, this plugin will throw an
-  error when transforming imports that do not begin with `/`, `./`, or `../`.
+* `basePath` - When importing anything that does not begin with `/`, `./`, or `../`, this option can
+  be set to join with the path using `path.join(basePath, target)`. Using an absolute base path is
+  recommended.
 
 * `encoding` - The encoding option passed to `fs.readFileSync()`. Defaults to `utf8`.
 
